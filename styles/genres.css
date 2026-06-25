@@ -1,0 +1,59 @@
+.genres {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.05) 100%);
+    overflow-x: auto;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.genres::-webkit-scrollbar {
+    height: 4px;
+}
+
+.genres::-webkit-scrollbar-track {
+    background: var(--surface);
+}
+
+.genres::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.genre-item {
+    padding: 0.75rem 1.5rem;
+    background: var(--surface);
+    border: 2px solid transparent;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.genre-item:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.genre-item.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.genres-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.genres-nav .genre-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 20px;
+}
